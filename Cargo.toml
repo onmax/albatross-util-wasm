@@ -1,0 +1,25 @@
+[package]
+name = "albatross-util-wasm"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+wasm-bindgen = "0.2"
+serde = { version = "1.0", features = ["derive"] }
+rand = "0.8"
+nimiq-bls = { git = "https://github.com/nimiq/core-rs-albatross.git", branch = "albatross" }
+nimiq-utils = { git = "https://github.com/nimiq/core-rs-albatross.git", branch = "albatross", features = ["key-rng"] }
+nimiq-transaction = { git = "https://github.com/nimiq/core-rs-albatross.git", branch = "albatross", features = ["serde-derive"] }
+beserial = { git = "https://github.com/nimiq/core-rs-albatross.git", branch = "albatross" }
+getrandom = { version = "0.2", features = ["js"] }
+serde-wasm-bindgen = "0.5.0"
+wasm-bindgen-derive = "0.1.1"
+js-sys = "0.3.61"
+hex = "0.4.3"
+serde_json = "1.0.95"
+
+[dev-dependencies]
+wasm-bindgen-test = "0.2"
