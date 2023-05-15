@@ -21,4 +21,3 @@ pub fn generate_bls() -> KeyPair {
         public_key: keypair.public_key.to_string(),
     }
 }
-
