@@ -15,10 +15,8 @@ pub fn parse_tx_data(value: String) -> Result<JsValue, JsValue> {
     }
 
     let tx_type_outgoing = OutgoingStakingTransactionProof::deserialize_from_vec(&value);
-    if tx_type_outgoing.is_ok() {
-        return Err(JsValue::from_str(
-            "Parsed transaction data as OutgoingStakingTransactionProof, but failed to serialize",
-        ));
+    if let Ok(tx_type_outgoing) = tx_type_outgoing {
+        return Ok(serde_wasm_bindgen::to_value(&tx_type_outgoing)?);
     }
 
     Err(JsValue::from_str("Failed to parse transaction data"))
