@@ -10,12 +10,12 @@ crate-type = ["cdylib"]
 wasm-bindgen = "0.2"
 serde = { version = "1.0", features = ["derive"] }
 rand = "0.8"
-nimiq-bls = { git = "https://github.com/nimiq/core-rs-albatross.git" }
-nimiq-utils = { git = "https://github.com/nimiq/core-rs-albatross.git", features = ["key-rng"] }
-nimiq-transaction = { git = "https://github.com/nimiq/core-rs-albatross.git", features = ["serde-derive"] }
-beserial = { git = "https://github.com/nimiq/core-rs-albatross.git" }
-nimiq-keys = { git = "https://github.com/nimiq/core-rs-albatross.git" }
-nimiq-account = { git = "https://github.com/nimiq/core-rs-albatross.git" }
+nimiq-bls = { git = "https://github.com/nimiq/core-rs-albatross.git", rev = "v0.11.3"  }
+nimiq-utils = { git = "https://github.com/nimiq/core-rs-albatross.git", rev = "v0.11.3" , features = ["key-rng"] }
+nimiq-transaction = { git = "https://github.com/nimiq/core-rs-albatross.git", rev = "v0.11.3" , features = ["serde-derive"] }
+beserial = { git = "https://github.com/nimiq/core-rs-albatross.git", rev = "v0.11.3"  }
+nimiq-keys = { git = "https://github.com/nimiq/core-rs-albatross.git", rev = "v0.11.3"  }
+nimiq-account = { git = "https://github.com/nimiq/core-rs-albatross.git", rev = "v0.11.3", default-features = false  }
 getrandom = { version = "0.2", features = ["js"] }
 serde-wasm-bindgen = "0.5.0"
 wasm-bindgen-derive = "0.1.1"
